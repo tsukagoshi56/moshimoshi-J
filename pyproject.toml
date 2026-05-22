@@ -7,13 +7,5 @@ dependencies = [
     "moshi<=0.2.2",
 ]
 
-[project.scripts]
-run-server = "run:main"
-
 [tool.uv]
-# Linux GPU (24GB+ VRAM) required
-# bitsandbytes is automatically included on Linux by moshi
-
-[build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
+package = false
