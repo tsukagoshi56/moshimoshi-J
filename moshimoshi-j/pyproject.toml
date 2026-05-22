@@ -1,0 +1,19 @@
+[project]
+name = "llm-jp-moshi"
+version = "0.1.0"
+description = "LLM-jp-Moshi-v1 Japanese full-duplex spoken dialogue model runner"
+requires-python = ">=3.10,<3.15"
+dependencies = [
+    "moshi<=0.2.2",
+]
+
+[project.scripts]
+run-server = "run:main"
+
+[tool.uv]
+# Linux GPU (24GB+ VRAM) required
+# bitsandbytes is automatically included on Linux by moshi
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
